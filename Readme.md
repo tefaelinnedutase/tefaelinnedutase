@@ -1,13 +1,14 @@
 # Service Center Te-Fa
 
-Situs web statis single-page untuk Service Center Te-Fa. Situs ini menampilkan profil layanan servis elektronik, area tentang, daftar layanan, dan formulir kontak yang terhubung ke FormSubmit.
+Situs web statis single-page untuk Service Center Te-Fa. Situs ini menampilkan profil layanan servis elektronik, area tentang, daftar layanan, dan formulir kontak yang terhubung ke FormSubmit serta WhatsApp.
 
 ## Fitur
 
-- Halaman landing page sederhana dengan hero section
+- Halaman landing page dengan hero section
 - Navigasi internal ke bagian Tentang, Layanan, dan Kontak
 - Panel keunggulan dan statistik layanan
-- Formulir kontak yang mengirimkan pesan melalui `https://formsubmit.co`
+- Formulir kontak yang mengirim pesan melalui FormSubmit
+- Tombol WhatsApp aktif untuk komunikasi langsung
 - Desain gelap dan responsif berbasis CSS murni
 
 ## Teknologi
@@ -22,12 +23,35 @@ Situs web statis single-page untuk Service Center Te-Fa. Situs ini menampilkan p
 - `styles.css` - tampilan dan layout website
 - `script.js` - interaksi sederhana formulir
 
-## Cara Menjalankan
+## Cara Menjalankan Lokal
 
-1. Buka folder `simple-website`
-2. Jalankan `index.html` di browser pilihan
+1. Buka folder proyek
+2. Jalankan file `index.html` di browser, atau
+3. Jalankan server lokal:
 
-> Catatan: Saat ini gambar pada halaman menggunakan path lokal (`d:\IMG_1642.JPG`). Pastikan mengganti path tersebut dengan URL yang dapat diakses atau memindahkan gambar ke folder proyek agar tampil dengan benar.
+```bash
+python -m http.server 8000
+```
+
+Lalu buka:
+
+```text
+http://localhost:8000
+```
+
+## Publish ke GitHub Pages
+
+Proyek ini sudah siap untuk dipublish ke GitHub Pages karena berformat website statis dan tidak membutuhkan build tools.
+
+Langkahnya:
+
+1. Push project ke repository GitHub Anda
+2. Buka tab `Settings` di repository GitHub
+3. Pilih `Pages`
+4. Pada `Build and deployment`, pilih `GitHub Actions`
+5. Pastikan branch utama yang dipakai adalah `main`
+
+Deploy otomatis juga sudah disiapkan menggunakan workflow di folder `.github/workflows/pages.yml`.
 
 ## Cara Mengedit
 

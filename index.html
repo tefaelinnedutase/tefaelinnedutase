@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header class="hero">
@@ -50,15 +51,16 @@
         <div class="panel service-panel">
           <div class="tech-image-wrap">
             <img
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                alt="Teknisi profesional sedang memperbaiki komponen elektronik"
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+              alt="Teknisi profesional sedang memperbaiki komponen elektronik"
+            />
+            <div class="image-badge">Service Center Active</div>
+          </div>
 
-              </div> </div> class="service-panel-header">
+          <div class="service-panel-header">
             <span class="status-dot"></span>
             <span>Service Center Active✅</span>
           </div>
-
-
 
           <div class="panel-inner">
             <h3>Keunggulan Kami</h3>
@@ -69,8 +71,6 @@
               <li>Proses cepat dan transparan</li>
             </ul>
           </div>
-</footer>
-
 
           <div class="mini-stats">
             <div>
@@ -89,8 +89,6 @@
         </div>
       </div>
     </header>
-
-
 
     <div class="stats-strip container">
       <div class="stat-box">
@@ -142,15 +140,14 @@
         <h2>Kontak</h2>
         <p>Isi form untuk mengirim pesan ke email dan membuka chat WhatsApp secara langsung.</p>
         <div class="contact-details">
-          <p>WhatsApp: <a href="https://wa.me/628981056300?text=Halo%20Service%20Center%20Te-Fa" target="_blank" rel="noopener">+62 898-1056-300</a></p>
+          <p>
+            WhatsApp:
+            <a href="https://wa.me/628981056300?text=Halo%20Service%20Center%20Te-Fa" target="_blank" rel="noopener">+62 898-1056-300</a>
+          </p>
           <p>Email: <a href="mailto:tefaelinnedutase@gmail.com">tefaelinnedutase@gmail.com</a></p>
         </div>
-        <form
-          class="contact-form"
-          id="contactForm"
-          action="https://formsubmit.co/tefaelinnedutase@gmail.com"
-          method="POST"
-        >
+
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/tefaelinnedutase@gmail.com" method="POST">
           <input type="text" id="name" name="name" placeholder="Nama Anda" required />
           <input type="email" id="email" name="email" placeholder="Email Anda" required />
           <textarea id="message" name="message" rows="4" placeholder="Pesan Anda" required></textarea>
@@ -164,7 +161,7 @@
 
     <footer class="footer">
       <div class="container footer-content">
-        <p>© 2026 Service Center Te-Fa. Semua hak dilindungi© .</p>
+        <p>© 2026 Service Center Te-Fa. Semua hak dilindungi.</p>
       </div>
     </footer>
   </body>
