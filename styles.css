@@ -43,10 +43,40 @@ body {
   min-height: 100vh;
   position: relative;
   background:
-    linear-gradient(120deg, rgba(15, 23, 42, 0.82), rgba(14, 116, 144, 0.7)),
+    linear-gradient(120deg, rgba(2, 6, 23, 0.86), rgba(8, 47, 73, 0.72), rgba(15, 23, 42, 0.88)),
     url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   overflow: visible;
   padding-bottom: 2.5rem;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(16px);
+  opacity: 0.9;
+  z-index: 0;
+  animation: floatGlow 10s ease-in-out infinite alternate;
+}
+
+.hero::before {
+  width: 350px;
+  height: 350px;
+  right: 8%;
+  top: 8%;
+  background: radial-gradient(circle, rgba(125, 211, 252, 0.9), rgba(56, 189, 248, 0.22), transparent 70%);
+  box-shadow: 0 0 80px rgba(125, 211, 252, 0.28);
+}
+
+.hero::after {
+  width: 280px;
+  height: 280px;
+  left: 7%;
+  bottom: 10%;
+  background: radial-gradient(circle, rgba(196, 181, 253, 0.8), rgba(168, 85, 247, 0.18), transparent 70%);
+  box-shadow: 0 0 68px rgba(196, 181, 253, 0.22);
+  animation-delay: 1.5s;
 }
 
 .hero::before,
@@ -81,11 +111,15 @@ body {
 
 @keyframes floatGlow {
   0% {
-    transform: translate3d(0, 0, 0) scale(0.96);
-    opacity: 0.6;
+    transform: translate3d(0, 0, 0) scale(0.96) rotate(0deg);
+    opacity: 0.65;
+  }
+  50% {
+    transform: translate3d(-12px, -18px, 0) scale(1.08) rotate(10deg);
+    opacity: 0.9;
   }
   100% {
-    transform: translate3d(0, -14px, 0) scale(1.08);
+    transform: translate3d(10px, -26px, 0) scale(1.14) rotate(-8deg);
     opacity: 1;
   }
 }
@@ -115,20 +149,28 @@ body {
   100% {
     transform: translateY(0) scale(1);
     text-shadow: 0 0 18px rgba(125, 211, 252, 0.18);
+    letter-spacing: 0.01em;
   }
   50% {
-    transform: translateY(-3px) scale(1.01);
-    text-shadow: 0 0 24px rgba(125, 211, 252, 0.35), 0 0 40px rgba(167, 139, 250, 0.3);
+    transform: translateY(-4px) scale(1.015);
+    text-shadow: 0 0 26px rgba(125, 211, 252, 0.45), 0 0 46px rgba(167, 139, 250, 0.33);
+    letter-spacing: 0.02em;
   }
 }
 
 @keyframes floatPanel {
   0%,
   100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-6px) rotate(0.8deg) scale(1.01);
   }
   50% {
-    transform: translateY(-8px) rotate(1.2deg);
+    transform: translateY(-12px) rotate(1.8deg) scale(1.02);
+  }
+  75% {
+    transform: translateY(-6px) rotate(-0.8deg) scale(1.01);
   }
 }
 
@@ -376,6 +418,7 @@ body {
   max-width: 620px;
   min-width: 0;
   --parallax-shift: 0px;
+  transform: translateZ(0);
 }
 
 .reveal {
