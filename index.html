@@ -20,7 +20,13 @@
   <body>
     <header class="hero">
       <nav class="nav container">
-        <a href="#" class="logo">Service Center Te-Fa</a>
+        <div class="nav-brand" aria-label="SMKN 2 Tangerang Selatan logo">
+          <img src="logosmk.webp" alt="Logo SMKN 2 Tangerang Selatan" class="brand-logo" />
+          <div class="brand-text">
+            <span class="brand-name">SMKN 2</span>
+            <span class="brand-location">Tangerang Selatan</span>
+          </div>
+        </div>
         <span class="brand-tag">Manage by AZKO</span>
         <div class="nav-links">
           <a href="#about">Tentang</a>
@@ -28,11 +34,13 @@
           <a href="#contact">Kontak</a>
         </div>
       </nav>
+
       <div class="container hero-content">
-        <div class="hero-copy">
-          <p class="eyebrow">Percayakan Barang Anda Kepada Kami</p>
-          <h1>Siap Melayani dan Menangani Barang Elektronik Anda</h1>
-          <p class="hero-text">
+        <div class="hero-copy parallax" data-speed="0.12">
+          <p class="service-hero-label reveal">Service Center Te-Fa</p>
+          <p class="eyebrow reveal">Percayakan Barang Anda Kepada Kami</p>
+          <h1 class="reveal">Siap Melayani dan Menangani Barang Elektronik Anda</h1>
+          <p class="hero-text reveal">
             Kami menangani perbaikan elektronik dengan proses cepat, teknisi profesional,
             serta sparepart yang terpercaya untuk menjaga performa perangkat tetap optimal.
           </p>
@@ -52,13 +60,12 @@
           </div>
         </div>
 
-        <div class="panel service-panel">
+        <div class="panel service-panel parallax" data-speed="0.08">
           <div class="tech-image-wrap">
             <img
               src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
               alt="Teknisi profesional sedang memperbaiki komponen elektronik"
             />
-            <div class="image-badge">Service Center Active</div>
           </div>
 
           <div class="service-panel-header">
@@ -152,6 +159,7 @@
         </div>
       </section>
 
+      
       <section class="section container">
         <div class="section-header">
           <p class="eyebrow">Kenapa pilih kami</p>
@@ -246,284 +254,28 @@
         <h2>Kontak</h2>
         <p>Isi form untuk mengirim pesan ke email dan membuka chat WhatsApp secara langsung.</p>
         <div class="contact-details">
-          <p>
-            WhatsApp:
-            <a href="https://wa.me/628981056300?text=Halo%20Service%20Center%20Te-Fa" target="_blank" rel="noopener">+62 898-1056-300</a>
-          </p>
-          <p>Email: <a href="mailto:tefaelinnedutase@gmail.com">tefaelinnedutase@gmail.com</a></p>
-        </div>
-
-        <form class="contact-form" id="contactForm" action="https://formsubmit.co/tefaelinnedutase@gmail.com" method="POST">
-          <input type="text" id="name" name="name" placeholder="Nama Anda" required />
-          <input type="email" id="email" name="email" placeholder="Email Anda" required />
-          <textarea id="message" name="message" rows="4" placeholder="Pesan Anda" required></textarea>
-          <input type="hidden" name="_subject" value="Pesan baru dari website" />
-          <input type="hidden" name="_captcha" value="false" />
-          <button type="submit" class="btn">Kirim</button>
-          <p id="formStatus" class="form-status">Mengirim...</p>
-        </form>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>© 2026 Service Center Te-Fa. Semua hak dilindungi.</p>
-      </div>
-    </footer>
-  </body>
-</html><!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Service Center Te-Fa</title>
-    <meta
-      name="description"
-      content="Service Center Te-Fa - layanan perbaikan dan perawatan elektronik profesional."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header class="hero">
-      <nav class="nav container">
-        <a href="#" class="logo">Service Center Te-Fa</a>
-        <span class="brand-tag">Manage by AZKO</span>
-        <div class="nav-links">
-          <a href="#about">Tentang</a>
-          <a href="#services">Layanan</a>
-          <a href="#contact">Kontak</a>
-        </div>
-      </nav>
-      <div class="container hero-content">
-        <div class="hero-copy">
-          <p class="eyebrow">Percayakan Barang Anda Kepada Kami</p>
-          <h1>Siap Melayani dan Menangani Barang Elektronik Anda</h1>
-          <p class="hero-text">
-            Kami menangani perbaikan elektronik dengan proses cepat, teknisi profesional,
-            serta sparepart yang terpercaya untuk menjaga performa perangkat tetap optimal.
-          </p>
-          <div class="hero-actions">
-            <a href="#contact" class="btn">Hubungi Kami</a>
-            <a href="#services" class="btn btn-secondary">Lihat Layanan</a>
-          </div>
-          <div class="trust-row">
-            <span>✔ Teknisi berpengalaman</span>
-            <span>✔ Garansi service</span>
-            <span>✔ Diagnosa cepat</span>
-          </div>
-          <div class="hero-badges">
-            <span>Service 24 Jam</span>
-            <span>Sparepart Terpercaya</span>
-            <span>Hasil Terjamin</span>
-          </div>
-        </div>
-
-        <div class="panel service-panel">
-          <div class="tech-image-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-              alt="Teknisi profesional sedang memperbaiki komponen elektronik"
-            />
-            <div class="image-badge">Service Center Active</div>
-          </div>
-
-          <div class="service-panel-header">
-            <span class="status-dot"></span>
-            <span>Service Center Active✅</span>
-          </div>
-
-          <div class="panel-inner">
-            <h3>Keunggulan Kami</h3>
-            <ul class="feature-list">
-              <li>Diagnosa perangkat elektronik secara detail</li>
-              <li>Perbaikan mesin cuci, kipas angin, TV, audio, dan elektronik rumah</li>
-              <li>Penggantian komponen berkualitas dan aman</li>
-              <li>Proses cepat dan transparan</li>
-            </ul>
-          </div>
-
-          <div class="mini-stats">
-            <div>
-              <strong>Estimasi</strong>
-              <span>Tergantung kerusakan</span>
-            </div>
-            <div>
-              <strong>Konsultasi</strong>
-              <span>100% Gratis</span>
-            </div>
-            <div>
-              <strong>Perbaikan</strong>
-              <span>100+</span>
+          <div class="contact-item">
+            <span class="contact-icon whatsapp" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.52 3.48A11.7 11.7 0 0 0 12.02 1C6.55 1 2.08 5.47 2.08 10.95c0 1.93.51 3.8 1.48 5.46L2 22l5.73-1.52A10 10 0 0 0 12.02 20c5.47 0 9.94-4.47 9.94-9.95 0-2.66-1.04-5.17-2.44-7.07ZM12.02 18.3c-1.57 0-3.12-.43-4.46-1.24l-.32-.19-3.4.9.91-3.31-.21-.34A8.16 8.16 0 0 1 3.9 10.95c0-4.52 3.68-8.2 8.12-8.2 2.18 0 4.23.85 5.77 2.39a8.05 8.05 0 0 1 2.38 5.81c0 4.52-3.68 8.2-8.12 8.2Zm4.47-6.11c-.25-.12-1.47-.73-1.7-.81-.23-.08-.4-.12-.57.12-.17.25-.65.81-.8 1-.15.18-.29.2-.54.07-.25-.12-1.06-.39-2.01-1.25-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.38-.43.12-.14.17-.25.25-.42.08-.17.04-.32-.02-.44-.06-.12-.57-1.37-.78-1.88-.21-.5-.42-.43-.57-.44h-.49c-.17 0-.44.06-.66.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.43.95 2.6.06.17 1.66 2.52 4 3.52.56.24.99.38 1.32.49.56.18 1.08.15 1.49.09.45-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.49-.29Z"/>
+              </svg>
+            </span>
+            <div class="contact-text">
+              <small>WhatsApp</small>
+              <a href="https://wa.me/628981056300?text=Halo%20Service%20Center%20Te-Fa" target="_blank" rel="noopener">+62 898-1056-300</a>
             </div>
           </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="stats-strip container">
-      <div class="stat-box">
-        <strong>2+</strong>
-        <span>Tahun Pengalaman</span>
-      </div>
-      <div class="stat-box">
-        <strong>50+</strong>
-        <span>Barang Terlayani</span>
-      </div>
-      <div class="stat-box">
-        <strong>99%</strong>
-        <span>Kepuasan Pelanggan</span>
-      </div>
-    </div>
-
-    <main>
-      <section id="about" class="section container">
-        <div class="section-header">
-          <p class="eyebrow">Tentang Kami</p>
-          <h2>Teknisi yang siap menyelesaikan masalah Anda</h2>
-        </div>
-        <p>
-          Service Center ini adalah layanan perbaikan dan perawatan berbagai perangkat
-          elektronik dengan mengutamakan kualitas, ketelitian, dan kepuasan pelanggan.
-          Kami siap membantu menangani kerusakan elektronik secara profesional dengan
-          layanan yang terpercaya dan bergaransi.
-        </p>
-      </section>
-
-      <section class="section container">
-        <div class="section-header">
-          <p class="eyebrow">Proses Kerja</p>
-          <h2>Bagaimana kami membantu</h2>
-        </div>
-        <div class="process-grid">
-          <article class="process-card">
-            <span class="step-number">01</span>
-            <h3>Diagnosa</h3>
-            <p>Tim kami memeriksa kondisi perangkat secara detail sebelum proses perbaikan dimulai.</p>
-          </article>
-          <article class="process-card">
-            <span class="step-number">02</span>
-            <h3>Estimasi</h3>
-            <p>Kami memberikan penjelasan biaya dan durasi kerja secara jelas dan transparan.</p>
-          </article>
-          <article class="process-card">
-            <span class="step-number">03</span>
-            <h3>Perbaikan</h3>
-            <p>Perangkat diperbaiki menggunakan komponen yang tepat dan dikerjakan oleh teknisi ahli.</p>
-          </article>
-          <article class="process-card">
-            <span class="step-number">04</span>
-            <h3>Pengiriman</h3>
-            <p>Setelah selesai, perangkat dikembalikan dengan hasil yang sudah diperiksa dan siap pakai.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section container">
-        <div class="section-header">
-          <p class="eyebrow">Kenapa pilih kami</p>
-          <h2>Keunggulan yang membuat pelanggan kembali</h2>
-        </div>
-        <div class="benefit-grid">
-          <article class="benefit-card">
-            <div class="icon-badge">⚡</div>
-            <h3>Proses cepat</h3>
-            <p>Diagnosa dan penanganan dilakukan dengan efisien agar perangkat cepat kembali berfungsi.</p>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-badge">🛠️</div>
-            <h3>Teknisi ahli</h3>
-            <p>Dipercayai oleh pelanggan karena pengerjaan dilakukan oleh tenaga yang berpengalaman.</p>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-badge">✅</div>
-            <h3>Garansi terjamin</h3>
-            <p>Memberikan rasa aman dan kepercayaan bahwa hasil servis bisa dipertanggungjawabkan.</p>
-          </article>
-          <article class="benefit-card">
-            <div class="icon-badge">💬</div>
-            <h3>Komunikasi jelas</h3>
-            <p>Anda akan selalu diinformasikan terkait kondisi barang, estimasi, dan hasil perbaikan.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="services" class="section section-alt">
-        <div class="container">
-          <div class="section-header">
-            <p class="eyebrow">Layanan / Produk</p>
-            <h2>Solusi servis elektronik yang siap membantu</h2>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <h3>Layanan Perbaikan</h3>
-              <p>Dikerjakan Oleh Teknisi Profesional.</p>
-            </article>
-            <article class="card">
-              <h3>Layanan Pemasangan</h3>
-              <p>Pengerjaan Cepat dan Terpercaya.</p>
-            </article>
-            <article class="card">
-              <h3>Layanan Servis</h3>
-              <p>Servis Bergaransi.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section container">
-        <div class="section-header">
-          <p class="eyebrow">Testimoni</p>
-          <h2>Pelanggan puas, kami terus berkembang</h2>
-        </div>
-        <div class="testimonial-grid">
-          <article class="testimonial-card">
-            <p>“Pelayanan cepat, ramah, dan hasilnya sangat memuaskan. Barang saya kembali normal seperti baru.”</p>
-            <div class="person">
-              <strong>Rina</strong>
-              <span>Pelanggan</span>
+          <div class="contact-item">
+            <span class="contact-icon email" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.15-.75 6.85 5.09 6.85-5.09H5.15Zm13.1 1.8-6.17 4.57a1.25 1.25 0 0 1-1.56 0L5.75 7.8v9.45c0 .41.34.75.75.75h10.99c.41 0 .75-.34.75-.75V7.8Z"/>
+              </svg>
+            </span>
+            <div class="contact-text">
+              <small>Email</small>
+              <a href="mailto:tefaelinnedutase@gmail.com">tefaelinnedutase@gmail.com</a>
             </div>
-          </article>
-          <article class="testimonial-card">
-            <p>“Prosesnya jelas dan komunikasinya sangat baik. Saya merasa aman dan terbantu dengan penjelasan teknisnya.”</p>
-            <div class="person">
-              <strong>Yusuf</strong>
-              <span>Pelanggan</span>
-            </div>
-          </article>
-          <article class="testimonial-card">
-            <p>“Harga dan hasil kerja sesuai harapan. Saya merekomendasikan layanan ini untuk kebutuhan servis elektronik rumah.”</p>
-            <div class="person">
-              <strong>Dewi</strong>
-              <span>Pelanggan</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section container">
-        <div class="cta-banner">
-          <div>
-            <p class="eyebrow">Siap bantu?</p>
-            <h2>Hubungi kami sekarang untuk konsultasi gratis</h2>
           </div>
-          <a href="https://wa.me/628981056300?text=Halo%20Service%20Center%20Te-Fa" class="btn" target="_blank" rel="noopener">Chat WhatsApp</a>
-        </div>
-
-        <h2>Kontak</h2>
-        <p>Isi form untuk mengirim pesan ke email dan membuka chat WhatsApp secara langsung.</p>
-        <div class="contact-details">
-          <p>
-            WhatsApp:
-            <a href="https://wa.me/628981056300?text=Halo%20Service%20Center%20Te-Fa" target="_blank" rel="noopener">+62 898-1056-300</a>
-          </p>
-          <p>Email: <a href="mailto:tefaelinnedutase@gmail.com">tefaelinnedutase@gmail.com</a></p>
         </div>
 
         <form class="contact-form" id="contactForm" action="https://formsubmit.co/tefaelinnedutase@gmail.com" method="POST">
