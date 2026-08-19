@@ -1,0 +1,25 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Logo SMKN 2 Tangerang Selatan</title>
+  <desc id="desc">Modern emblem with circle, shield and number 2.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="160" height="160" rx="36" fill="url(#bg)"/>
+  <circle cx="80" cy="80" r="56" fill="none" stroke="url(#gold)" stroke-width="6"/>
+  <path d="M80 30 L110 42 L110 74 C110 97 95 116 80 126 C65 116 50 97 50 74 L50 42 Z" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M55 48 H105" stroke="url(#red)" stroke-width="5" stroke-linecap="round"/>
+  <text x="80" y="91" text-anchor="middle" font-size="44" font-weight="800" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif">2</text>
+  <text x="80" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#dbeafe" letter-spacing="2" font-family="Arial, Helvetica, sans-serif">SMKN</text>
+</svg>
