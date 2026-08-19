@@ -954,8 +954,141 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
-  .contact-details {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav {
+    width: min(92%, calc(100% - 18px));
+    justify-content: center;
+    text-align: center;
+    padding: 0.8rem 0.75rem;
+    top: 10px;
+  }
+
+  .nav-brand {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 0.8rem;
+  }
+
+  .brand-location {
+    font-size: 0.56rem;
+  }
+
+  .brand-tag {
+    width: 100%;
+    font-size: 0.56rem;
+    letter-spacing: 0.12em;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 0.5rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-bottom: 2rem;
+  }
+
+  .hero-content {
     grid-template-columns: 1fr;
+    width: min(92%, 540px);
+    padding-top: 5.5rem;
+    gap: 1.5rem;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .service-hero-label {
+    letter-spacing: 0.12em;
+    font-size: 0.62rem;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.14em;
+    font-size: 0.68rem;
+  }
+
+  h1 {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .hero-actions,
+  .hero-badges,
+  .trust-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn,
+  .hero-badges span,
+  .trust-row span {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-badges span {
+    display: block;
+  }
+
+  .stats-strip,
+  .cards,
+  .process-grid,
+  .benefit-grid,
+  .testimonial-grid,
+  .contact-details,
+  .cta-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-strip {
+    width: min(92%, 540px);
+  }
+
+  .cta-banner {
+    display: grid;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .mini-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 2.1rem 0;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.5rem, 6vw, 2.1rem);
+  }
+
+  .contact-item {
+    align-items: flex-start;
+  }
+
+  .contact-details {
+    gap: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -968,44 +1101,4 @@ textarea:focus {
 .footer {
   padding: 1.5rem 0 2rem;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .nav {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .nav-links {
-    justify-content: center;
-  }
-
-  .hero-content,
-  .cards,
-  .stats-strip,
-  .process-grid,
-  .benefit-grid,
-  .testimonial-grid,
-  .cta-banner {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-banner {
-    display: grid;
-    text-align: center;
-  }
-
-  .hero {
-    min-height: auto;
-    padding-bottom: 2rem;
-  }
-
-  .hero-content {
-    padding-top: 1rem;
-    width: min(1100px, 90%);
-  }
-
-  .mini-stats {
-    grid-template-columns: 1fr;
-  }
 }
