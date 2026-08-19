@@ -811,7 +811,7 @@ main {
 
 .contact-details {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin: 1.2rem 0 1.6rem;
 }
@@ -865,6 +865,11 @@ main {
 .contact-icon.email {
   background: linear-gradient(135deg, #e0f2fe, #dbeafe);
   color: #2563eb;
+}
+
+.contact-icon.maps {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  color: #b45309;
 }
 
 .contact-text {
