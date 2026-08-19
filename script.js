@@ -1,7 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.nav');
+  const revealItems = document.querySelectorAll('.reveal');
+  const parallaxItems = document.querySelectorAll('.parallax');
   const form = document.getElementById('contactForm');
   const phoneNumber = '628981056300';
   const defaultMessage = 'Halo Service Center Te-Fa, saya ingin bertanya tentang layanan Anda.';
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.88;
+
+    revealItems.forEach((item) => {
+      const itemTop = item.getBoundingClientRect().top;
+      if (itemTop < triggerBottom) {
+        item.classList.add('is-visible');
+      }
+    });
+
+    parallaxItems.forEach((item) => {
+      const speed = Number(item.dataset.speed || 0.08);
+      const rect = item.getBoundingClientRect();
+      const offset = (window.innerHeight - rect.top) * speed;
+      item.style.setProperty('--parallax-shift', `${Math.max(-18, Math.min(18, offset - 30))}px`);
+    });
+  };
+
+  if (nav) {
+    const handleScroll = () => {
+      nav.classList.toggle('is-scrolled', window.scrollY > 12);
+    };
+
+    window.addEventListener('scroll', () => {
+      handleScroll();
+      revealOnScroll();
+    });
+    handleScroll();
+  }
+
+  if (revealItems.length) {
+    revealOnScroll();
+  }
 
   if (form) {
     form.addEventListener('submit', (event) => {
