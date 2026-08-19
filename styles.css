@@ -156,15 +156,15 @@ body {
 }
 
 .brand-logo {
-  width: 52px;
-  height: 52px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   display: block;
-  border-radius: 12px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
-  padding: 2px;
+  padding: 3px;
   flex-shrink: 0;
 }
 
