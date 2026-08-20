@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.nav');
+  const backToTop = document.getElementById('backToTop');
   const revealItems = document.querySelectorAll('.reveal');
   const form = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateNavState = () => {
     if (!nav) return;
     nav.classList.toggle('is-scrolled', window.scrollY > 24);
+    if (backToTop) backToTop.classList.toggle('is-visible', window.scrollY > 420);
   };
 
   const revealNow = () => {
@@ -43,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavState();
     revealNow();
   }, { passive: true });
+
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   if (form && formStatus) {
     form.addEventListener('submit', async (event) => {
