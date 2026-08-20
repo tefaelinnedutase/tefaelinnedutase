@@ -348,7 +348,7 @@ body {
   align-items: center;
   min-height: 80vh;
   width: min(1200px, 92%);
-  padding-top: 1rem;
+  padding-top: 7rem;
   padding-bottom: 1.5rem;
   position: relative;
 }
