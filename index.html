@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head> <link rel="icon"  type="image/png" href="/tefaelinnedutase/favicon.png"/>
   <body>
@@ -291,22 +291,52 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/tefaelinnedutase@gmail.com" method="POST">
+        <form class="contact-form" id="contactForm" action="https://formsubmit.co/tefaelinnedutase@gmail.com" method="POST">
           <input type="text" id="name" name="name" placeholder="Nama Anda" required />
           <input type="email" id="email" name="email" placeholder="Email Anda" required />
           <textarea id="message" name="message" rows="4" placeholder="Pesan Anda" required></textarea>
           <input type="hidden" name="_subject" value="Pesan baru dari website" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" id="formReturnUrl" value="/" />
           <button type="submit" class="btn">Kirim</button>
           <p id="formStatus" class="form-status">Mengirim...</p>
         </form>
       </section>
     </main>
 
+    <aside class="chatbot" aria-label="Asisten Service Center Te-Fa">
+      <div class="chatbot-panel" id="chatbotPanel" hidden>
+        <div class="chatbot-header">
+          <div>
+            <span class="chatbot-kicker">Asisten Te-Fa</span>
+            <h2>Butuh bantuan?</h2>
+          </div>
+          <button class="chatbot-close" id="chatbotClose" type="button" aria-label="Tutup chat">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages" aria-live="polite">
+          <div class="chat-message bot-message">Halo! Saya bisa membantu menjawab pertanyaan tentang layanan, estimasi, lokasi, dan cara menghubungi kami.</div>
+        </div>
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+          <button type="button" data-question="Layanan apa saja yang tersedia?">Lihat layanan</button>
+          <button type="button" data-question="Berapa estimasi biaya servis?">Tanya estimasi</button>
+          <button type="button" data-question="Bagaimana cara menghubungi teknisi?">Hubungi teknisi</button>
+          <button type="button" data-question="Bagaimana proses servisnya?">Proses servis</button>
+          <button type="button" data-question="Apakah ada garansi?">Tanya garansi</button>
+        </div>
+        <form class="chatbot-form" id="chatbotForm">
+          <label class="sr-only" for="chatbotInput">Tulis pertanyaan</label>
+          <input id="chatbotInput" type="text" placeholder="Tulis pertanyaan..." autocomplete="off" required />
+          <button type="submit" aria-label="Kirim pertanyaan">Kirim</button>
+        </form>
+      </div>
+      <button class="chatbot-toggle" id="chatbotToggle" type="button" aria-expanded="false" aria-controls="chatbotPanel">
+        <span aria-hidden="true">✦</span>
+        <span class="chatbot-toggle-label">Tanya Te-Fa</span>
+      </button>
+    </aside>
+
     <footer class="footer">
       <div class="container footer-content">
-        <p>© 2026 Service Center Te-Fa Nedutase. Semua hak dilindungi.</p>
+        <p>© 2026 Service Center Te-Fa. Semua hak dilindungi.</p>
       </div>
     </footer>
   </body>
