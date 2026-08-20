@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('.nav');
   const revealItems = document.querySelectorAll('.reveal');
   const form = document.getElementById('contactForm');
