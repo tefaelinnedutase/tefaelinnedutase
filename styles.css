@@ -1160,23 +1160,6 @@ textarea:focus {
   .contact-details {
     gap: 0.8rem;
   }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-.form-status {
-  margin-top: 0.4rem;
-  color: var(--accent);
-  font-size: 0.95rem;
-}
-
-.footer {
-  padding: 1.5rem 0 2rem;
-  text-align: center;
-}
 :root {
   --bg: #0f172a;
   --bg-soft: #1e293b;
@@ -2339,6 +2322,23 @@ textarea:focus {
   .contact-details {
     gap: 0.8rem;
   }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.form-status {
+  margin-top: 0.4rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.footer {
+  padding: 1.5rem 0 2rem;
+  text-align: center;
+}
 
   .btn {
     width: 100%;
