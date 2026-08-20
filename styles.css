@@ -147,14 +147,10 @@ body {
 @keyframes heroTitleGlare {
   0%,
   100% {
-    transform: translateY(0) scale(1);
     text-shadow: 0 0 18px rgba(125, 211, 252, 0.18);
-    letter-spacing: 0.01em;
   }
   50% {
-    transform: translateY(-4px) scale(1.015);
     text-shadow: 0 0 26px rgba(125, 211, 252, 0.45), 0 0 46px rgba(167, 139, 250, 0.33);
-    letter-spacing: 0.02em;
   }
 }
 
@@ -209,7 +205,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.2rem;
+  padding: 0.65rem 0.9rem;
   flex-wrap: wrap;
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(14px);
@@ -225,7 +221,7 @@ body {
   top: 8px;
   background: rgba(15, 23, 42, 0.22);
   box-shadow: 0 18px 34px rgba(15, 23, 42, 0.18), 0 0 30px rgba(125, 211, 252, 0.16);
-  padding: 0.8rem 1.2rem;
+  padding: 0.55rem 0.9rem;
   border-radius: 16px;
   border-color: rgba(255, 255, 255, 0.26);
 }
@@ -238,10 +234,11 @@ body {
 }
 
 .brand-logo {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   display: block;
+  animation: none;
   border-radius: 0;
   background: transparent;
   border: none;
@@ -262,7 +259,6 @@ body {
   font-weight: 800;
   letter-spacing: 0.04em;
   text-shadow: 0 1px 2px rgba(15, 23, 42, 0.35);
-  animation: navTextFloat 4.5s ease-in-out infinite;
 }
 
 .brand-location {
@@ -272,8 +268,6 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-shadow: 0 1px 2px rgba(15, 23, 42, 0.35);
-  animation: navTextFloat 4.5s ease-in-out infinite;
-  animation-delay: 0.6s;
 }
 
 .nav.is-scrolled {
@@ -306,8 +300,6 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
-  animation: navTextFloat 4.8s ease-in-out infinite;
-  animation-delay: 1.1s;
 }
 
 .nav-links {
@@ -324,15 +316,6 @@ body {
   font-weight: 700;
   position: relative;
   text-shadow: 0 1px 2px rgba(15, 23, 42, 0.35);
-  animation: navLinkFloat 5.2s ease-in-out infinite;
-}
-
-.nav-links a:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.nav-links a:nth-child(3) {
-  animation-delay: 1s;
 }
 
 .nav-links a:hover {
@@ -463,7 +446,7 @@ h3 {
 h1 {
   font-size: clamp(2.2rem, 4vw, 4rem);
   line-height: 1.1;
-  animation: heroTitleGlare 5s ease-in-out infinite;
+  animation: heroTitleGlare 7s ease-in-out infinite;
   text-shadow: 0 0 18px rgba(125, 211, 252, 0.24);
 }
 
@@ -615,7 +598,7 @@ h1 {
   backdrop-filter: blur(8px);
   box-shadow: 0 25px 40px rgba(15, 23, 42, 0.35), 0 0 24px rgba(125, 211, 252, 0.12);
   padding: 1rem;
-  animation: floatPanel 6s ease-in-out infinite;
+  animation: none;
 }
 
 .tech-image-wrap {
@@ -1054,7 +1037,7 @@ textarea:focus {
     width: min(92%, calc(100% - 18px));
     justify-content: center;
     text-align: center;
-    padding: 0.8rem 0.75rem;
+    padding: 0.5rem 0.55rem;
     top: 10px;
   }
 
@@ -1064,8 +1047,8 @@ textarea:focus {
   }
 
   .brand-logo {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
   }
 
   .brand-name {
