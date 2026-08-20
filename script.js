@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.location.replace(`${window.location.origin}${window.location.pathname}`);
       } catch (error) {
-        formStatus.textContent = 'Pesan gagal dikirim. Silakan coba lagi.';
-        formStatus.style.color = '#f87171';
+        form.action = form.action.replace('/ajax/', '/');
+        form.submit();
       }
     });
   }
