@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealItems = document.querySelectorAll('.reveal');
   const form = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
+  const formReturnUrl = document.getElementById('formReturnUrl');
+
+  if (formReturnUrl) {
+    formReturnUrl.value = `${window.location.origin}${window.location.pathname}`;
+  }
 
   const updateNavState = () => {
     if (!nav) return;
@@ -40,14 +45,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   if (form && formStatus) {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
       formStatus.textContent = 'Mengirim...';
       formStatus.style.color = '#7dd3fc';
 
       if (!form.checkValidity()) {
-        event.preventDefault();
         formStatus.textContent = 'Harap lengkapi form dengan benar';
         formStatus.style.color = '#fbbf24';
+        return;
+      }
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) {
+          throw new Error('Pengiriman gagal');
+        }
+
+        window.location.replace(`${window.location.origin}${window.location.pathname}`);
+      } catch (error) {
+        formStatus.textContent = 'Pesan gagal dikirim. Silakan coba lagi.';
+        formStatus.style.color = '#f87171';
       }
     });
   }
