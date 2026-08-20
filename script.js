@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   updateNavState();
   window.addEventListener('scroll', () => {
     updateNavState();
-    revealNow();
   }, { passive: true });
 
   if (backToTop) {
