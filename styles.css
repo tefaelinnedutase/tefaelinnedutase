@@ -1031,6 +1031,37 @@ textarea:focus {
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+    background: linear-gradient(135deg, #0f172a, #16263d);
+    background-attachment: scroll;
+  }
+
+  .hero {
+    background: linear-gradient(145deg, #020617, #083047 58%, #0f172a);
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  .parallax {
+    will-change: auto;
+    transition: none;
+  }
+
+  .reveal {
+    filter: none;
+    transition: opacity 0.45s ease;
+    transform: none;
+  }
+
+  h1 {
+    animation: none;
+    text-shadow: none;
+  }
+
+  .btn {
+    animation: none;
   }
 
   .nav {
@@ -1082,6 +1113,10 @@ textarea:focus {
     width: min(92%, 540px);
     padding-top: 9rem;
     gap: 1.5rem;
+  }
+
+  .tech-image-wrap img {
+    height: 190px;
   }
 
   .hero-copy {
@@ -1301,5 +1336,17 @@ textarea:focus {
 @media (max-width: 768px) {
   .chatbot { right: 0.75rem; bottom: 0.75rem; }
   .chatbot-panel { width: min(370px, calc(100vw - 1.5rem)); }
+  .chatbot-panel { backdrop-filter: none; box-shadow: 0 18px 38px rgba(2, 6, 23, 0.5); }
   .back-to-top { right: 0.85rem; bottom: 5.9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
