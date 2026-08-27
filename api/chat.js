@@ -83,7 +83,8 @@ module.exports = async function handler(request, response) {
     const result = await geminiResponse.json();
     if (!geminiResponse.ok) {
       console.error('Gemini API error:', result);
-      return sendJson(response, 502, { error: 'AI sedang tidak dapat merespons.' });
+      const providerMessage = result.error?.message || `Gemini HTTP ${geminiResponse.status}`;
+      return sendJson(response, 502, { error: `Gemini menolak permintaan: ${providerMessage}` });
     }
 
     const answer = result.candidates?.[0]?.content?.parts
