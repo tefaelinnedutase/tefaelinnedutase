@@ -44,7 +44,7 @@ Jika website dipublikasikan melalui GitHub Pages, ubah nilai `data-ai-endpoint` 
 
 Jika website dijalankan dari Vercel, biarkan nilainya `/api/chat` karena frontend dan backend berada pada domain yang sama.
 
-Te-Fa AI menggunakan gaya CS semi-formal dengan model Groq `llama-3.1-8b-instant`. Untuk harga, AI tidak mengarang nominal; jika data belum cukup, AI akan meminta detail perangkat atau menyatakan bahwa perangkat perlu didiagnosa terlebih dahulu.
+Te-Fa AI menggunakan gaya CS semi-formal dengan model Groq `openai/gpt-oss-20b` secara default. Model dapat diganti melalui variable `GROQ_MODEL` di Vercel jika diperlukan. Untuk harga, AI tidak mengarang nominal; jika data belum cukup, AI akan meminta detail perangkat atau menyatakan bahwa perangkat perlu didiagnosa terlebih dahulu.
 
 ## Cara Menjalankan Lokal
 
