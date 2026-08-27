@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingBubble.textContent = result.answer;
         chatHistory.push({ role: 'user', text: question }, { role: 'model', text: result.answer });
       } catch (error) {
-        loadingBubble.textContent = 'Te-Fa AI sedang tidak terhubung. Silakan hubungi WhatsApp +62 877 1117 7813.';
+        loadingBubble.textContent = error.message || 'Te-Fa AI sedang tidak terhubung. Silakan hubungi WhatsApp +62 877 1117 7813.';
       }
       chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     };
