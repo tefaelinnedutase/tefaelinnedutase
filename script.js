@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return 'Rentang harga jasa adalah Rp20.000 sampai maksimal Rp75.000, belum termasuk sparepart atau komponen. Untuk estimasi yang lebih tepat, teknisi perlu mengetahui jenis perangkat, merek, gejala kerusakan, dan kebutuhan servis. Jika informasinya belum cukup, perangkat perlu didiagnosa terlebih dahulu.';
     }
     if (text.includes('garansi')) {
-      return 'Layanan servis kami bergaransi. Detail dan durasi garansi bergantung pada jenis perbaikan serta komponen yang digunakan, dan akan dijelaskan oleh teknisi.';
+      return 'Servis kami memiliki garansi selama 1 minggu setelah perangkat selesai diservis di tempat kami. Jika perangkat rusak kembali dalam waktu 1 minggu setelah servis, pelanggan dapat mengajukan klaim dan penanganannya akan kami cover sesuai garansi yang ditawarkan.';
     }
     if (text.includes('proses') || text.includes('cara') || text.includes('tahap')) {
       return 'Prosesnya: perangkat diterima, teknisi melakukan diagnosa, estimasi biaya disampaikan, perbaikan dikerjakan setelah disetujui, lalu perangkat diuji sebelum dikembalikan.';
