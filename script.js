@@ -106,13 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
       return 'Halo! Selamat datang di Service Center Te-Fa. Saya siap membantu tentang layanan, perangkat, biaya, proses, garansi, lokasi, dan kontak teknisi.';
     }
     if (text.includes('layanan') || text.includes('servis') || text.includes('perbaikan') || text.includes('bisa')) {
-      return 'Kami melayani perbaikan, pemasangan, dan servis bergaransi untuk mesin cuci, kipas angin, TV, audio, serta elektronik rumah lainnya. Teknisi akan memeriksa perangkat terlebih dahulu sebelum memberi tindakan.';
+      return 'Kami melayani perbaikan, pemasangan, dan servis bergaransi untuk hampir semua elektronik rumahan, seperti mesin cuci, kipas angin, audio, dan perangkat rumah tangga lainnya. Untuk TV, HP, laptop, dan terutama PC, silakan tanyakan dahulu karena kami belum berpengalaman menanganinya.';
     }
-    if (text.includes('mesin cuci') || text.includes('kipas') || text.includes('tv') || text.includes('televisi') || text.includes('audio')) {
-      return 'Perangkat yang dapat dikonsultasikan antara lain mesin cuci, kipas angin, TV, audio, dan elektronik rumah lainnya. Jelaskan gejala kerusakannya agar teknisi dapat membantu menentukan langkah awal.';
+    if (text.includes('mesin cuci') || text.includes('kipas') || text.includes('tv') || text.includes('televisi') || text.includes('audio') || text.includes('hp') || text.includes('laptop') || text.includes('pc')) {
+      return 'Kami hampir dapat menangani semua alat elektronik rumahan. Untuk TV, HP, laptop, dan terutama PC, silakan konsultasikan dahulu karena kami belum berpengalaman menanganinya. Jelaskan gejala kerusakannya agar teknisi dapat membantu menentukan langkah awal.';
     }
     if (text.includes('harga') || text.includes('biaya') || text.includes('estimasi') || text.includes('berapa')) {
-      return 'Biaya belum bisa ditentukan sebelum diagnosa karena bergantung pada jenis dan tingkat kerusakan. Konsultasi serta diagnosa awal gratis, dan estimasi dijelaskan terlebih dahulu sebelum perbaikan.';
+      return 'Harga jasa mulai dari Rp20.000, belum termasuk sparepart atau komponen. Untuk estimasi yang lebih tepat, teknisi perlu mengetahui jenis perangkat, merek, gejala kerusakan, dan kebutuhan servis. Jika informasinya belum cukup, perangkat perlu didiagnosa terlebih dahulu.';
     }
     if (text.includes('garansi')) {
       return 'Layanan servis kami bergaransi. Detail dan durasi garansi bergantung pada jenis perbaikan serta komponen yang digunakan, dan akan dijelaskan oleh teknisi.';
