@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return 'Kami hampir dapat menangani semua alat elektronik rumahan. Untuk TV, HP, laptop, dan terutama PC, silakan konsultasikan dahulu karena kami belum berpengalaman menanganinya. Jelaskan gejala kerusakannya agar teknisi dapat membantu menentukan langkah awal.';
     }
     if (text.includes('harga') || text.includes('biaya') || text.includes('estimasi') || text.includes('berapa')) {
-      return 'Harga jasa mulai dari Rp20.000, belum termasuk sparepart atau komponen. Untuk estimasi yang lebih tepat, teknisi perlu mengetahui jenis perangkat, merek, gejala kerusakan, dan kebutuhan servis. Jika informasinya belum cukup, perangkat perlu didiagnosa terlebih dahulu.';
+      return 'Rentang harga jasa adalah Rp20.000 sampai maksimal Rp75.000, belum termasuk sparepart atau komponen. Untuk estimasi yang lebih tepat, teknisi perlu mengetahui jenis perangkat, merek, gejala kerusakan, dan kebutuhan servis. Jika informasinya belum cukup, perangkat perlu didiagnosa terlebih dahulu.';
     }
     if (text.includes('garansi')) {
       return 'Layanan servis kami bergaransi. Detail dan durasi garansi bergantung pada jenis perbaikan serta komponen yang digunakan, dan akan dijelaskan oleh teknisi.';
