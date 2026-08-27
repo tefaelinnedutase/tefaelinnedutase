@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" role="img" aria-labelledby="title desc">
+  <title id="title">Logo SMK Negeri 2 Kota Tangerang Selatan</title>
+  <desc id="desc">Lambang perisai biru dengan roda gigi, buku, dan pita</desc>
+  <path d="M10 10h220v62c0 120-20 181-110 218C40 253 10 192 10 72V10Z" fill="#8ed0ee" stroke="#e52329" stroke-width="7"/>
+  <path d="M16 16h208v45H16Z" fill="#ffe600" stroke="#e52329" stroke-width="3"/>
+  <text x="120" y="39" text-anchor="middle" font-family="Arial,sans-serif" font-size="19" font-weight="800" fill="#001b9e">SMK NEGERI 2</text>
+  <text x="120" y="56" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#001b9e">KOTA TANGERANG SELATAN</text>
+  <path d="M48 116l18-11 5-19 17 5 15-12 13 14 17-6 6 18 17 10-9 17 5 19-18 4-12 16-15-12-19 5-4-19-17-12Z" fill="#071ca5" stroke="#e52329" stroke-width="4"/>
+  <path d="M192 116l-18-11-5-19-17 5-15-12-13 14-17-6-6 18-17 10 9 17-5 19 18 4 12 16 15-12 19 5 4-19 17-12Z" fill="#071ca5" stroke="#e52329" stroke-width="4"/>
+  <g fill="none" stroke="#e52329" stroke-width="4">
+    <rect x="102" y="77" width="28" height="22" rx="2" fill="#8ed0ee"/>
+    <path d="M116 99v15m-10-8 10 8 10-8"/>
+    <rect x="77" y="116" width="28" height="22" rx="2" fill="#8ed0ee"/>
+    <rect x="135" y="116" width="28" height="22" rx="2" fill="#8ed0ee"/>
+  </g>
+  <path d="M72 161h96v25c-17-10-32-10-48 0-16-10-31-10-48 0Z" fill="#e8f8ff" stroke="#071ca5" stroke-width="4"/>
+  <path d="M72 161c17-10 32-10 48 0 16-10 31-10 48 0M120 161v25" fill="none" stroke="#071ca5" stroke-width="3"/>
+  <path d="M105 201h30v45h-30Z" fill="#1b9b64" stroke="#e52329" stroke-width="3"/>
+  <path d="M112 201v45m16-45v45" stroke="#b6e657" stroke-width="5"/>
+  <circle cx="120" cy="262" r="20" fill="none" stroke="#76b82a" stroke-width="5"/>
+  <path d="M120 240v44M98 262h44M105 247l30 30M135 247l-30 30" stroke="#76b82a" stroke-width="3"/>
+</svg>

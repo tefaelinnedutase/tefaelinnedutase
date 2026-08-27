@@ -89,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatbotInput = document.getElementById('chatbotInput');
   const chatbotMessages = document.getElementById('chatbotMessages');
   const quickReplies = document.querySelectorAll('[data-question]');
+  const aiEndpoint = document.body.dataset.aiEndpoint || '/api/chat';
+  const chatHistory = [];
 
   const addChatMessage = (message, type) => {
     const bubble = document.createElement('div');
@@ -131,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return 'Lokasi kami tersedia melalui Google Maps pada bagian Kontak. Pilih tombol "Lihat Lokasi Kami" untuk membuka petanya.';
     }
     if (text.includes('kontak') || text.includes('hubungi') || text.includes('teknisi') || text.includes('whatsapp') || text.includes('nomor') || text.includes('telepon')) {
-      return 'Silakan hubungi teknisi melalui WhatsApp di +62 898-1056-300. Sertakan jenis perangkat, keluhan, dan foto/video jika memungkinkan agar konsultasi lebih cepat.';
+      return 'Silakan hubungi teknisi melalui WhatsApp di +62 877 1117 7813. Sertakan jenis perangkat, keluhan, dan foto/video jika memungkinkan agar konsultasi lebih cepat.';
     }
     if (text.includes('email') || text.includes('surat')) {
       return 'Anda juga dapat menghubungi kami melalui email tefaelinnedutase@gmail.com atau menggunakan formulir Kontak di website.';
@@ -153,16 +155,33 @@ document.addEventListener('DOMContentLoaded', () => {
     chatbotToggle.setAttribute('aria-expanded', 'false');
   };
 
-  if (chatbotToggle && chatbotPanel) {
+  if (chatbotToggle && chatbotPanel && chatbotClose && chatbotForm && chatbotInput && chatbotMessages) {
     chatbotToggle.addEventListener('click', () => {
       if (chatbotPanel.hidden) openChat();
       else closeChat();
     });
     chatbotClose.addEventListener('click', closeChat);
 
-    const answerQuestion = (question) => {
+    const answerQuestion = async (question) => {
       addChatMessage(question, 'user');
-      addChatMessage(getBotReply(question), 'bot');
+      const loadingMessage = 'Te-Fa AI sedang menyiapkan jawaban...';
+      addChatMessage(loadingMessage, 'bot');
+      const loadingBubble = chatbotMessages.lastElementChild;
+
+      try {
+        const response = await fetch(aiEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ question, history: chatHistory })
+        });
+        const result = await response.json();
+        if (!response.ok || !result.answer) throw new Error(result.error || 'AI tidak merespons');
+
+        loadingBubble.textContent = result.answer;
+        chatHistory.push({ role: 'user', text: question }, { role: 'model', text: result.answer });
+      } catch (error) {
+        loadingBubble.textContent = 'Te-Fa AI sedang tidak terhubung. Silakan hubungi WhatsApp +62 877 1117 7813.';
+      }
       chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
     };
 

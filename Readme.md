@@ -9,6 +9,7 @@ Situs web statis single-page untuk Service Center Te-Fa. Situs ini menampilkan p
 - Panel keunggulan dan statistik layanan
 - Formulir kontak yang mengirim pesan melalui FormSubmit
 - Tombol WhatsApp aktif untuk komunikasi langsung
+- Chatbot Te-Fa AI berbasis Gemini melalui backend aman
 - Desain gelap dan responsif berbasis CSS murni
 
 ## Teknologi
@@ -22,6 +23,28 @@ Situs web statis single-page untuk Service Center Te-Fa. Situs ini menampilkan p
 - `index.html` - struktur halaman website
 - `styles.css` - tampilan dan layout website
 - `script.js` - interaksi sederhana formulir
+- `api/chat.js` - backend Vercel Function untuk menghubungkan chatbot ke Gemini
+
+## Mengaktifkan Te-Fa AI
+
+API key Gemini tidak boleh ditulis di `script.js`, `index.html`, atau repository GitHub.
+Gunakan Vercel sebagai backend:
+
+1. Push folder proyek ke repository GitHub.
+2. Import repository tersebut di [Vercel](https://vercel.com/) dan pilih folder `tefaelinnedutase` sebagai project root jika diperlukan.
+3. Di Vercel buka `Project Settings` > `Environment Variables`.
+4. Tambahkan variable `GEMINI_API_KEY` dan isi sendiri dengan API key dari Google AI Studio.
+5. Deploy ulang project Vercel.
+
+Jika website dipublikasikan melalui GitHub Pages, ubah nilai `data-ai-endpoint` pada tag `body` di `index.html` menjadi URL Function Vercel, misalnya:
+
+```html
+<body data-ai-endpoint="https://nama-project.vercel.app/api/chat">
+```
+
+Jika website dijalankan dari Vercel, biarkan nilainya `/api/chat` karena frontend dan backend berada pada domain yang sama.
+
+Te-Fa AI menggunakan gaya CS semi-formal. Untuk harga, AI tidak mengarang nominal; jika data belum cukup, AI akan meminta detail perangkat atau menyatakan bahwa perangkat perlu didiagnosa terlebih dahulu.
 
 ## Cara Menjalankan Lokal
 
