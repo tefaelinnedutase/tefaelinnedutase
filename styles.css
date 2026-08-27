@@ -1337,6 +1337,7 @@ textarea:focus {
 .chatbot-messages::-webkit-scrollbar { width: 5px; }
 .chatbot-messages::-webkit-scrollbar-thumb { border-radius: 99px; background: rgba(125, 211, 252, 0.35); }
 .chat-message { max-width: 86%; padding: 0.75rem 0.9rem; border: 1px solid transparent; border-radius: 1rem; font-size: 0.81rem; line-height: 1.5; box-shadow: 0 5px 12px rgba(2, 6, 23, 0.15); }
+.chat-list-item { display: block; margin-top: 0.2rem; }
 .bot-message { background: rgba(23, 43, 71, 0.72); border-color: rgba(125, 211, 252, 0.16); color: #f0f9ff; border-top-left-radius: 0.3rem; }
 .user-message { justify-self: end; background: rgba(14, 165, 233, 0.82); color: #fff; border-top-right-radius: 0.3rem; }
 .chatbot-quick-replies { display: flex; flex-wrap: wrap; gap: 0.45rem; padding: 0.85rem 1.05rem 0.95rem; background: rgba(11, 25, 48, 0.62); }

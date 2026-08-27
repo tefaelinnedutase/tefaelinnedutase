@@ -92,10 +92,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const aiEndpoint = document.body.dataset.aiEndpoint || '/api/chat';
   const chatHistory = [];
 
+  const renderChatText = (text) => {
+    const escaped = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+
+    return escaped
+      .replace(/^###?\s+(.+)$/gm, '<strong>$1</strong>')
+      .replace(/^[-*]\s+(.+)$/gm, '<span class="chat-list-item">• $1</span>')
+      .replace(/^(\d+)[.]\s+(.+)$/gm, '<span class="chat-list-item">$1. $2</span>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/__(.+?)__/g, '<strong>$1</strong>')
+      .replace(/`([^`]+)`/g, '<code>$1</code>')
+      .replace(/\n/g, '<br>');
+  };
+
   const addChatMessage = (message, type) => {
     const bubble = document.createElement('div');
     bubble.className = `chat-message ${type}-message`;
-    bubble.textContent = message;
+    bubble.innerHTML = renderChatText(message);
     chatbotMessages.appendChild(bubble);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
   };
@@ -177,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = await response.json();
         if (!response.ok || !result.answer) throw new Error(result.error || 'AI tidak merespons');
 
-        loadingBubble.textContent = result.answer;
+        loadingBubble.innerHTML = renderChatText(result.answer);
         chatHistory.push({ role: 'user', text: question }, { role: 'model', text: result.answer });
       } catch (error) {
         loadingBubble.textContent = error.message || 'Te-Fa AI sedang tidak terhubung. Silakan hubungi WhatsApp +62 877 1117 7813.';
